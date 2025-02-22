@@ -1,0 +1,137 @@
+/* --- もともと <style> タグ内に定義されていた auto-style 系 --- */
+.auto-style1 {
+    font-size: xx-small;
+    text-align: right;
+  }
+  .auto-style2 {
+    text-align: center;
+    font-size: small;
+  }
+  .auto-style3 {
+    color: #FF0000; /* 赤 */
+    font-size: x-large;
+  }
+  .auto-style4 {
+    font-size: xx-small;
+  }
+  
+  /* --- 汎用クラス（テキスト揃え）--- */
+  .text-left {
+    text-align: left;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .text-center {
+    text-align: center;
+  }
+  
+  /* --- 段落の行間用 --- */
+  .line-height-150 {
+    line-height: 150%;
+  }
+  
+  /* --- 色指定 --- */
+  .text-blue {
+    color: #0000ff;
+  }
+  
+  /* --- FONT size=3 相当（例として medium に）--- */
+  .font-size3 {
+    font-size: medium;
+  }
+  
+  /* --- それぞれの幅・高さ指定を class 化 --- */
+  .td-h16-w268 {
+    height: 16px;
+    width: 268px;
+  }
+  .td-h24-w268 {
+    height: 24px;
+    width: 268px;
+  }
+  .td-h30-w268 {
+    height: 30px;
+    width: 268px;
+  }
+  .td-h19-w268 {
+    height: 19px;
+    width: 268px;
+  }
+  .td-h31-w268 {
+    height: 31px;
+    width: 268px;
+  }
+  .td-h26-w268 {
+    height: 26px;
+    width: 268px;
+  }
+  .td-h40-w268 {
+    height: 40px;
+    width: 268px;
+  }
+  .td-h28-w268 {
+    height: 28px;
+    width: 268px;
+  }
+  
+  /* --- タイトル文字（春日部硬式テニスクラブ等）--- */
+  .title1 {
+    font-size: 20pt;
+    color: #cc0066;
+    font-family: "ＭＳ Ｐゴシック", sans-serif;
+  }
+  .title2 {
+    font-size: 14pt;
+    color: fuchsia;
+    font-family: "ＭＳ Ｐゴシック", sans-serif;
+  }
+  
+  /* --- HGS創英角ポップ体を使う例 --- */
+  .font-hgs-pop {
+    font-family: "HGS創英角ホ゜ッフ゜体", cursive, sans-serif;
+  }
+  
+  /* --- 右カラム用の幅や高さ指定 --- */
+  .td-w453 {
+    width: 453px;
+  }
+  .td-w52-h229 {
+    width: 52px;
+    height: 229px;
+  }
+  .td-w340-h229 {
+    width: 340px;
+    height: 229px;
+  }
+  .td-w61-h229 {
+    width: 61px;
+    height: 229px;
+  }
+  
+  /* 左下など追加の寸法指定 */
+  .td-w52 {
+    width: 52px;
+  }
+  .td-w340 {
+    width: 340px;
+  }
+  .td-w61 {
+    width: 61px;
+  }
+  
+  /* 内部の小テーブル */
+  .td-h109-w339 {
+    height: 109px;
+    width: 339px;
+  }
+  .td-h1-w339 {
+    height: 1px;
+    width: 339px;
+  }
+  
+  /* 14ptの文字指定（「検索は … で！」用） */
+  .font-14pt {
+    font-size: 14pt;
+  }
+  
