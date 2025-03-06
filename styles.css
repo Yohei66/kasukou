@@ -1,137 +1,161 @@
-/* --- もともと <style> タグ内に定義されていた auto-style 系 --- */
-.auto-style1 {
-    font-size: xx-small;
-    text-align: right;
+/*******************************************
+ * 全体設定
+ *******************************************/
+ html, body {
+    margin: 0;
+    padding: 0;
+    /* 全体の背景色（薄い水色） */
+    background-color: #dce6ef;
+    font-family: "ＭＳ Ｐゴシック", sans-serif;
   }
-  .auto-style2 {
+  
+  /*******************************************
+   * ヘッダー部分
+   *******************************************/
+  
+  /* 背景に鳥や木がある画像を敷き詰めたい場合 */
+  .site-header {
+    background: url("image/geo/birds-bg.jpg") no-repeat center top;
+    /*  ↑ ここの画像パスやサイズは環境に合わせて修正してください */
+    background-size: cover; /* または contain */
+    padding-bottom: 1em;    /* 下に少し余白 */
+  }
+  
+  /* タイトル文字をある程度中央寄せ＋横幅制限 */
+  .header-inner {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em 0 0.5em 0; /* 上下余白 */
+    position: relative;     /* 「by K.Kazami」を右上に配置するため */
+  }
+  
+  /* タイトル文字 */
+  .title-big {
+    font-size: 28px;
+    color: #d41a8a; /* 濃いピンク系 */
+    font-weight: bold;
+  }
+  .title-small {
+    font-size: 20px;
+    color: #ff66ff; /* 薄めのピンク～フクシア系 */
+    margin-left: 1em;
+  }
+  
+  /* 「by K.Kazami」右上寄せ */
+  .author {
+    position: absolute;
+    right: 0;
+    bottom: 0; /* タイトル行の下寄せ */
+    font-size: 14px;
+    color: #333;
+    margin: 0.3em;
+  }
+  
+  /* 棒の画像を横いっぱいに表示する */
+  .rod-wrap {
     text-align: center;
-    font-size: small;
+    margin-top: 0.5em;
   }
-  .auto-style3 {
-    color: #FF0000; /* 赤 */
+  .rod-img {
+    max-width: 700px; /* 実際の画像サイズに合わせて調整 */
+    width: 90%;
+    height: auto;
+  }
+  
+  /*******************************************
+   * メイン部分： 左メニュー + 右コンテンツ
+   *******************************************/
+  .main-container {
+    /* 横並びにするため flex を利用 */
+    display: flex;
+    flex-direction:row;
+    width: 90%;
+    max-width: 1200px;
+    margin: 1em auto; 
+  }
+  
+  /* 左メニュー領域 */
+  .left-menu {
+    width: 180px; 
+    background-color: #f6f1de;  /* 薄いベージュ */
+    padding: 1em;
+    margin-right: 1em;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+  }
+  
+  .left-menu h2 {
+    font-size: 16px;
+    margin: 0 0 0.5em;
+  }
+  .left-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .left-menu li {
+    margin: 0.3em 0;
+  }
+  .left-menu a {
+    text-decoration: none;
+    color: #0066cc;
+    font-size: 14px;
+  }
+  
+  /* 右コンテンツ領域 */
+  .main-content {
+    flex: 1;  
+    background-color: #ffffff;
+    padding: 1em;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /*******************************************
+   * メイン内容（会員募集中・画像など）
+   ******************************************/
+  /* 棒に吊り下げられているイメージに見せたいブロック */
+  .pinned-area {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  
+  /* 「会員募集中」などのテキスト */
+  .recruit {
+    margin: 0.5em 0;
+  }
+  .highlight-red {
+    color: red;
     font-size: x-large;
+    font-weight: bold;
   }
-  .auto-style4 {
-    font-size: xx-small;
+  .small-note {
+    font-size: small;
+    margin-left: 1em;
   }
   
-  /* --- 汎用クラス（テキスト揃え）--- */
-  .text-left {
-    text-align: left;
+  /* テニスボール画像 */
+  .tennis-ball {
+    max-width: 300px; /* 必要に応じて調整 */
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 1em auto;
   }
-  .text-right {
-    text-align: right;
-  }
-  .text-center {
+  
+  /* 下部の説明 */
+  .explain-area {
     text-align: center;
+    margin-top: 2em;
   }
-  
-  /* --- 段落の行間用 --- */
-  .line-height-150 {
-    line-height: 150%;
+  .search-note {
+    font-size: 16px;
+    font-weight: bold;
   }
-  
-  /* --- 色指定 --- */
-  .text-blue {
-    color: #0000ff;
-  }
-  
-  /* --- FONT size=3 相当（例として medium に）--- */
-  .font-size3 {
-    font-size: medium;
-  }
-  
-  /* --- それぞれの幅・高さ指定を class 化 --- */
-  .td-h16-w268 {
-    height: 16px;
-    width: 268px;
-  }
-  .td-h24-w268 {
-    height: 24px;
-    width: 268px;
-  }
-  .td-h30-w268 {
-    height: 30px;
-    width: 268px;
-  }
-  .td-h19-w268 {
-    height: 19px;
-    width: 268px;
-  }
-  .td-h31-w268 {
-    height: 31px;
-    width: 268px;
-  }
-  .td-h26-w268 {
-    height: 26px;
-    width: 268px;
-  }
-  .td-h40-w268 {
-    height: 40px;
-    width: 268px;
-  }
-  .td-h28-w268 {
-    height: 28px;
-    width: 268px;
-  }
-  
-  /* --- タイトル文字（春日部硬式テニスクラブ等）--- */
-  .title1 {
-    font-size: 20pt;
-    color: #cc0066;
-    font-family: "ＭＳ Ｐゴシック", sans-serif;
-  }
-  .title2 {
-    font-size: 14pt;
-    color: fuchsia;
-    font-family: "ＭＳ Ｐゴシック", sans-serif;
-  }
-  
-  /* --- HGS創英角ポップ体を使う例 --- */
-  .font-hgs-pop {
-    font-family: "HGS創英角ホ゜ッフ゜体", cursive, sans-serif;
-  }
-  
-  /* --- 右カラム用の幅や高さ指定 --- */
-  .td-w453 {
-    width: 453px;
-  }
-  .td-w52-h229 {
-    width: 52px;
-    height: 229px;
-  }
-  .td-w340-h229 {
-    width: 340px;
-    height: 229px;
-  }
-  .td-w61-h229 {
-    width: 61px;
-    height: 229px;
-  }
-  
-  /* 左下など追加の寸法指定 */
-  .td-w52 {
-    width: 52px;
-  }
-  .td-w340 {
-    width: 340px;
-  }
-  .td-w61 {
-    width: 61px;
-  }
-  
-  /* 内部の小テーブル */
-  .td-h109-w339 {
-    height: 109px;
-    width: 339px;
-  }
-  .td-h1-w339 {
-    height: 1px;
-    width: 339px;
-  }
-  
-  /* 14ptの文字指定（「検索は … で！」用） */
-  .font-14pt {
-    font-size: 14pt;
+  .small-text {
+    font-size: 12px;
+    color: #333;
+    line-height: 1.6;
   }
   
